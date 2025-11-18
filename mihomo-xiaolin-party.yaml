@@ -1,7 +1,7 @@
 
 dns:
   enable: true 
-  listen: "0.0.0.0:1053"
+  listen: "127.0.0.1:1053"
   ipv6: false
   prefer-h3: false
   respect-rules: true
@@ -363,3 +363,4 @@ rules:
   - "GEOIP,CN,全局直连,no-resolve"
 
   - "MATCH,漏网之鱼"
+
