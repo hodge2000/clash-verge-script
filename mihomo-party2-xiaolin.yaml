@@ -209,7 +209,7 @@ proxy-groups:
 
   - name: "电报消息"
     type: "select"
-    proxies: ["奈飞节点", "延迟选优", "♻️自动点选", "故障转移", "JP日本节点", "US美国节点", "TW台湾节点", "KR韩国节点", "SG狮城节点", "HK香港节点"]
+    proxies: ["延迟选优", "♻️自动点选", "故障转移", "JP日本节点", "US美国节点", "TW台湾节点", "KR韩国节点", "SG狮城节点", "HK香港节点"]
 
   - name: "ChatGPT"
     type: "select"
@@ -281,6 +281,7 @@ proxy-groups:
     interval: 300
     tolerance: 100
     timeout: 2000
+    hidden: true
   - name: "JP日本节点"
     type: "url-test"
     include-all-proxies: true
@@ -289,6 +290,7 @@ proxy-groups:
     interval: 300
     tolerance: 100
     timeout: 2000
+    hidden: true
   - name: "US美国节点"
     type: "url-test"
     include-all-proxies: true
@@ -297,6 +299,7 @@ proxy-groups:
     interval: 300
     tolerance: 100
     timeout: 2000
+    hidden: true
   - name: "TW台湾节点"
     type: "url-test"
     include-all-proxies: true
@@ -305,6 +308,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     timeout: 2000
+    hidden: true
   - name: "SG狮城节点"
     type: "url-test"
     include-all-proxies: true
@@ -312,7 +316,8 @@ proxy-groups:
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     tolerance: 50
-    timeout: 200
+    timeout: 2000
+    hidden: true
   - name: "KR韩国节点"
     type: "url-test"
     include-all-proxies: true
@@ -321,10 +326,12 @@ proxy-groups:
     interval: 300
     tolerance: 50
     timeout: 2000
+    hidden: true
   - name: "奈飞节点"
     type: "select"
     include-all-proxies: true
     filter: "(NF|奈飞|解锁|Netflix|NETFLIX|Media)"
+    hidden: true
 
 rules:
   - "DOMAIN-SUFFIX,googleapis.cn,节点选择"
